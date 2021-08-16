@@ -4,15 +4,21 @@
 .Brand{
     color: white;
     font-size: 15px;
-    margin-top: -20px;
+    margin-top: -18px;
+    padding: 0 50px;
 }
 .Navlink{
     color: white;
     text-decoration: none;
-    font-size: 25px;
-    margin-top: -25px;
+    font-size: 20px;
+    margin: 0 10px;
+   
 }
 .Navlink:hover{
+    color: wheat;
+}
+.active{
+    text-shadow: 1px 1px gray;
     color: wheat;
 }
 /* .Nav{

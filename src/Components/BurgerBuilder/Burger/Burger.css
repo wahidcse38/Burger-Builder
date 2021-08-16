@@ -1,0 +1,18 @@
+.Burger{
+    width: 100%;
+    margin: auto;
+    height: 400px;
+    overflow-y: scroll;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.Burger::-webkit-scrollbar{
+    display: none;
+}
+.Burger{
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
+     /*Hide scrollbar for Firefox */
+    scrollbar-width: none;
+}
