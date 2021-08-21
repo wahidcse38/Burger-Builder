@@ -1,3 +1,4 @@
+
 import * as actionType from './ActionTypes';
 
 const ingredientsPrice = {
@@ -16,6 +17,10 @@ const Initial_State = {
     orders: [],
     orderLoading: true,
     orderErr: false,
+    token: null,
+    userId: null,
+    authLoading: false,
+    authFailedMsg: null,
 }
 export const Reducers = (state = Initial_State, action) => {
     const ingredientsCopy = [...state.ingredients];
@@ -82,6 +87,33 @@ export const Reducers = (state = Initial_State, action) => {
                 ...state,
                 orderErr: true,
                 orderLoading: false,
+            }
+
+        //Auth cases
+        case actionType.AUTH_SUCCESS:
+            return {
+                ...state,
+                token: action.payload.token,
+                userId: action.payload.userId,
+            }
+        //Auto logout
+        case actionType.AUTH_LOGOUT:
+            return {
+                ...state,
+                authFailedMsg: null,
+                token: null,
+                userId: null,
+            }
+        // Loading Spinner
+        case actionType.AUTH_LOADING:
+            return {
+                ...state,
+                authLoading: action.payload,
+            }
+        case actionType.AUTH_FAILED:
+            return {
+                ...state,
+                authFailedMsg: action.payload
             }
         default:
             return state;
