@@ -1,11 +1,13 @@
 .Navigation{
     margin-bottom: 20px;
+    padding: 0 1px;
 }
 .Brand{
     color: white;
     font-size: 15px;
-    margin-top: -18px;
-    padding: 0 50px;
+    margin-top: -10px 0;
+    padding: 0 15px;
+   
 }
 .Navlink{
     color: white;
